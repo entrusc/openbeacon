@@ -33,7 +33,7 @@
 
 */
 
-#include <htc.h>
+#include <xc.h>
 #include <stdlib.h>
 #include "config.h"
 #include "openbeacon.h"
@@ -50,7 +50,9 @@
 #define EEPROM_OID_H 2
 #define EEPROM_OID_L 3
 
-__CONFIG (0x0314);
+//__CONFIG (0x0314);
+//#pragma config CONFIG1 = 0x0314
+__PROG_CONFIG(1, 0x314);
 __EEPROM_DATA (0x00, 0x00, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF);
 
 // key is set in create_counted_firmware.php while patching firmware hex file

@@ -1,6 +1,6 @@
-COMPILER_PATH=/usr/hitech/picc/9.83/bin/
+#COMPILER_PATH=/opt/microchip/xc8/v1.38/bin/
 PK2=/usr/local/bin/pk2cmd
-CC=$(COMPILER_PATH)picc
+CC=picc
 
 MODE=std
 CHIP=16F688

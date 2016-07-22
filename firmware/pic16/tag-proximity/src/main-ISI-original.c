@@ -27,7 +27,7 @@
 
 */
 
-#include <htc.h>
+#include <xc.h>
 #include <stdlib.h>
 #include "config.h"
 #include "openbeacon.h"
@@ -38,7 +38,9 @@
 #define XXTEA_ROUNDS (6UL + 52UL / XXTEA_BLOCK_COUNT)
 #define DELTA 0x9E3779B9UL
 
-__CONFIG (0x0314);
+//__CONFIG (0x0314);
+//#pragma config CONFIG1 = 0x0314
+__PROG_CONFIG(1, 0x314);
 __EEPROM_DATA (0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00);
 
 // key is set in create_counted_firmware.php while patching firmware hex file
